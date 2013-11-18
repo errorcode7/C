@@ -1,3 +1,39 @@
+int main()
+{
+
+	int num;
+	printf("input:"); 
+	scanf("%d",&num);
+	printf("output:"); 
+	put(num);
+	printf("\n");     
+	return 0;
+}
+/////////////////////////////////////////////////////////////////////
+#include <stdio.h>
+
+void  main()
+{
+  double a,b;
+  printf("please input two numbers:");
+  scanf("%lf,%lf",&a,&b);
+  printf("Output");  
+  printf("\na=%.6lf,b=%.6lf\n",a,b);
+}
+/////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+
+void main()
+{
+	char a;
+	printf("Input a lowercase letter: ");
+	scanf("%c",&a);
+        printf("Output:");
+	printf("%c(%d)\n",a,a);
+	a=a-32;
+	printf("%c(%d)\n",a,a);
+}
+/////////////////////////////////////////////////////////////////////
 #include <stdio.h>
 #include <math.h>
 
