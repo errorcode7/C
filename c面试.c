@@ -3,14 +3,40 @@
 #include<string.h>
 int main()
 {
-	char *p= "abcdefg";
+	char *p= "12345";
 	int len;
 	len=strlen(p);
-	while(len>=0)
+	while(len>0)
 	{
-		printf("%c",*(p+len));
+		printf("%c",*(p+len-1));
 		len--;
 	}
 	printf("\n");
 	return 0;
+}
+//String To Int
+int strtoint(char *str)
+{
+
+	int n=0;
+	int neg=0;
+	if(*str=='-')//is negative number?
+	{
+		str=str+1;
+		neg=1;
+	}
+	while(*str!=0)//12345
+	{
+		if('9'<*str||*str<'0')
+		{
+			printf("string error!\n");
+			exit(-1);
+		}
+		n=n*10+*str-'0';
+		str++;
+	}
+	if(neg)
+		return -n;
+	else
+		return n;
 }
