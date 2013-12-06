@@ -40,3 +40,13 @@ int strtoint(char *str)
 	else
 		return n;
 }
+//strlen函数的实现
+int strlen(const char *str)//unsigned
+{
+	int n=0;
+	while(*str++!=0)//'\0'
+	{
+		n++;	
+	}
+	return n;
+}
