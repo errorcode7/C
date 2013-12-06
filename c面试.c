@@ -1,18 +1,23 @@
-//字符反转显示
+
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-	char *p= "12345";
+	return 0;
+}
+
+//字符串反转
+void revstr(const char *str)
+{
+//	char *p= "12345";
 	int len;
-	len=strlen(p);
+	len=strlen(str);
 	while(len>0)
 	{
-		printf("%c",*(p+len-1));
+		printf("%c",*(str+len-1));
 		len--;
 	}
 	printf("\n");
-	return 0;
 }
 //String To Int
 int strtoint(char *str)
