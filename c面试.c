@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -54,4 +53,12 @@ int strlen(const char *str)//unsigned
 		n++;	
 	}
 	return n;
+}
+
+//strcpy的实现
+char *strcp(char *des,const char *src)
+{
+	char *ret=des;
+	while((*des++=*src++));//返回左操作数
+	return ret;
 }
