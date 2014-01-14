@@ -62,3 +62,34 @@ char *strcp(char *des,const char *src)
 	while((*des++=*src++));//返回左操作数
 	return ret;
 }
+//长字符串中找段字符串,返回个数
+int find(const char *shortstr, const char *longstr)//short long
+{
+	int n=0;
+	const char *p1=shortstr;
+	const char *p=longstr;
+	while(*p)
+	{
+		while(1)
+		{
+			if(*shortstr == 0)
+			{
+				n++;
+				break;
+			}
+
+			if(*shortstr != *longstr)
+			{
+				break;
+			}
+				
+
+			shortstr++;
+			longstr++;
+		}
+		shortstr=p1;
+		p=p+1;
+		longstr=p;
+	}
+	return n;
+}
