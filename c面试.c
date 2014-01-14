@@ -93,3 +93,33 @@ int find(const char *shortstr, const char *longstr)//short long
 	}
 	return n;
 }
+//字符串排序
+char *sortstr(char *str)
+{
+	char *p=str;
+	char *ret=str;
+	char *min;
+	char c;
+	while(*p != '\0')
+	{
+		min=p;
+		while(*str != '\0')
+		{
+			if(*min>*str)
+			{
+				min=str;
+			}
+			str=str+1;
+		}
+		
+		if(min != p)
+		{
+			c=*p;
+			*p=*min;
+			*min=c;
+		}
+		p=p+1;
+		str=p;
+	}
+	return ret;
+}
